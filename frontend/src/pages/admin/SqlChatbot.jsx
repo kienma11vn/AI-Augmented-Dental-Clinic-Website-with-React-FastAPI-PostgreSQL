@@ -99,7 +99,7 @@ export default function SqlChatbot() {
 
       {/* Cửa sổ Modal Popup Chatbot AI SQL */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:justify-end sm:pr-6 p-2 bg-black/40 backdrop-blur-sm animate-fadeIn">
+        <div className="fixed inset-0 z-50 bg-slate-900/40 dark:bg-slate-950/70 backdrop-blur-sm flex items-center justify-center sm:justify-end sm:pr-6 p-4 animate-fadeIn">
           <div className="w-full sm:w-[820px] h-[620px] bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row overflow-hidden transition-colors">
             
             {/* Cột bên trái: Banner minh họa hình ảnh */}
