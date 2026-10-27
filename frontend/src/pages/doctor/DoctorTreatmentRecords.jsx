@@ -288,8 +288,12 @@ export default function DoctorTreatmentRecords() {
         new Date(apt.start_time).getTime() === new Date(record.next_appointment_date).getTime();
       return isSamePatient && (isFollowUpNote || isOldTimeMatch);
     });
+	
+	const hasFollowUp = Boolean(record.next_appointment_date || followUpApt);
 
-    let initialChairId = followUpApt?.chair_id || record?.appointment?.chair_id || record?.chair_id || '';
+    let initialChairId = hasFollowUp 
+  ? (followUpApt?.chair_id || record?.appointment?.chair_id || record?.chair_id || '') 
+  : '';
     let initialServiceId = followUpApt?.service_id || '';
 
     // Tách mã dịch vụ từ tag [Dịch vụ: ...] trong ghi chú nếu có
@@ -307,7 +311,7 @@ export default function DoctorTreatmentRecords() {
       treatment_notes: record.treatment_notes || '',
       follow_up_date: dateVal,
       follow_up_time: timeVal,
-      chair_id: '',
+      chair_id: initialChairId ? String(initialChairId) : '',
       service_id: initialServiceId ? String(initialServiceId) : '',
     });
     setIsEditOpen(true);

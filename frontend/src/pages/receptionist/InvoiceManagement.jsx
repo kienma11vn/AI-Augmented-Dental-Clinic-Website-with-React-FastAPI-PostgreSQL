@@ -78,7 +78,11 @@ function RecordAutocompleteInput({ label, placeholder, options, value, onChange,
                 </div>
                 <span className="text-xs text-slate-400 dark:text-slate-500">{opt.date}</span>
               </div>
-              {opt.subTitle && <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{opt.subTitle}</div>}
+              {opt.subTitle && (
+			    <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-5">
+				  {opt.subTitle}
+			    </div>
+			  )}
             </li>
           ))}
         </ul>
