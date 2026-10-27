@@ -307,7 +307,7 @@ export default function DoctorTreatmentRecords() {
       treatment_notes: record.treatment_notes || '',
       follow_up_date: dateVal,
       follow_up_time: timeVal,
-      chair_id: initialChairId ? String(initialChairId) : '',
+      chair_id: '',
       service_id: initialServiceId ? String(initialServiceId) : '',
     });
     setIsEditOpen(true);
