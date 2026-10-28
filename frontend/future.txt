@@ -1,0 +1,3 @@
+Thêm biểu đồ cho Đánh giá & Phản hồi (Admin): Tổng quan, Tỷ lệ mức độ đánh giá, Từng bác sĩ.
+Thêm biểu đồ thể hiện Tỷ lệ quay lại tái khám (Admin).
+Cập nhật template báo cáo.
